@@ -23,9 +23,9 @@ func (c *mmClient) EventStream() chan *model.WebSocketEvent {
 
 func (c *mmClient) Close() error {
 	c.wsClient.Close()
-	ok, resp := c.Client4.Logout()
-	if !ok {
-		return resp.Error
-	}
+	// ok, resp := c.Client4.Logout()
+	// if !ok {
+	// 	return resp.Error
+	// }
 	return nil
 }

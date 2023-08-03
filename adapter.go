@@ -190,9 +190,9 @@ func (a *BotAdapter) handleMessageEvent(msg *model.WebSocketEvent, brain *joe.Br
 	}
 
 	// Short-circuit for our own messages
-	if post.UserId == a.user.Id {
-		return
-	}
+	// if post.UserId == a.user.Id {
+	// 	return
+	// }
 
 	channel := a.roomsByID(post.ChannelId)
 	if channel == nil {
